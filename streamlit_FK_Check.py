@@ -7,8 +7,6 @@ Created on Mon Feb  6 11:38:03 2023
 
 from openpyxl import load_workbook, Workbook
 import pandas as pd
-import os
-import xlsxwriter
 
 import fk.fk as fk
 import km.km as km
