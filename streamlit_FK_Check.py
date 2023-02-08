@@ -157,6 +157,7 @@ def main_check_FK(Status, wb_fk, df_KM, delete_grey):
 st.title("FK_KM CHECK")
 wb = Workbook()
 
+ruta_fk = st.text_input('Ruta_Fk', 'ruta')
 fkonzept = st.file_uploader("upload FK file", type={"xlsx","csv", "txt"})
 km_liste = st.file_uploader("upload KM file", type={"xlsx","csv", "txt"})
 
@@ -171,7 +172,7 @@ df_km=pd.DataFrame()
 
 if fkonzept is not None:
     df_fk = pd.read_excel(fkonzept)
-    wb = load_workbook(fkonzept.name,data_only=True)
+    wb = load_workbook(ruta_fk,data_only=True)
     st.title(wb)
     
 if km_liste is not None:
