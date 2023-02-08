@@ -5,7 +5,7 @@ Created on Mon Feb  6 11:38:03 2023
 @author: eduardo.moreno
 """
 
-from openpyxl import load_workbook, Workbook
+from openpyxl import reader,load_workbook, Workbook
 import pandas as pd
 
 import fk.fk as fk
@@ -163,8 +163,7 @@ ruta_fk = st.text_input('Ruta_Fk', 'ruta')
 st.write(ruta_fk)
 
 fkonzept = st.file_uploader("upload FK file", type={"xlsx","csv", "txt"})
-wb = load_workbook(filename=BytesIO(fkonzept))
-
+wb =reader.excel.load_workbook(BytesIO(fkonzept), read_only=True)
 
 km_liste = st.file_uploader("upload KM file", type={"xlsx","csv", "txt"})
 
