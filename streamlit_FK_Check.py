@@ -16,6 +16,7 @@ import io
 buffer = io.BytesIO()
 
 import streamlit as st
+from io import BytesIO
 
 
 import sys
