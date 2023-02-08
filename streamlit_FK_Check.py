@@ -163,9 +163,7 @@ ruta_fk = st.text_input('Ruta_Fk', 'ruta')
 st.write(ruta_fk)
 
 fkonzept = st.file_uploader("upload FK file", type={"xlsx","csv", "txt"})
-wb = Workbook()
-virtual_workbook = BytesIO()
-wb.save(virtual_workbook)
+wb = load_workbook(filename=BytesIO(fkonzept))
 
 
 km_liste = st.file_uploader("upload KM file", type={"xlsx","csv", "txt"})
