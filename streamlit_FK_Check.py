@@ -174,6 +174,7 @@ if fkonzept is not None:
     df_fk = pd.read_excel(fkonzept)
     wb = load_workbook(ruta_fk,data_only=True)
     st.title(wb)
+    st.write(wb.sheetnames)
     
 if km_liste is not None:
     df_km = pd.read_excel(km_liste,engine='openpyxl')    
