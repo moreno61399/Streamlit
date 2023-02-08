@@ -10,7 +10,6 @@ from PIL import ImageColor
 from openpyxl.styles import PatternFill, Font
 from tkinter import filedialog
 from tkinter import messagebox
-from tkinter import *
 from copy import copy
 
 import re
