@@ -161,6 +161,11 @@ wb = Workbook()
 ruta_fk = st.text_input('Ruta_Fk', 'ruta')
 st.write(ruta_fk)
 fkonzept = st.file_uploader("upload FK file", type={"xlsx","csv", "txt"})
+workbook_xml = BytesIO(fkonzept)
+workbook_xml.seek(0)
+wb = openpyxl.load_workbook(workbook_xml)
+
+
 km_liste = st.file_uploader("upload KM file", type={"xlsx","csv", "txt"})
 
 
@@ -174,7 +179,7 @@ df_km=pd.DataFrame()
 
 if fkonzept is not None:
     df_fk = pd.read_excel(fkonzept)
-    wb = load_workbook(ruta_fk,data_only=True)
+    #wb = load_workbook(ruta_fk,data_only=True)
     st.title(wb)
     st.write(wb.active)
     
