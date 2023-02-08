@@ -163,7 +163,7 @@ ruta_fk = st.text_input('Ruta_Fk', 'ruta')
 st.write(ruta_fk)
 
 fkonzept = st.file_uploader("upload FK file", type={"xlsx","csv", "txt"})
-wb =reader.excel.load_workbook(BytesIO(fkonzept.name), read_only=True)
+wb =reader.excel.load_workbook(fkonzept.name, read_only=True)
 
 km_liste = st.file_uploader("upload KM file", type={"xlsx","csv", "txt"})
 
