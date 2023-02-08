@@ -164,7 +164,7 @@ st.write(ruta_fk)
 fkonzept = st.file_uploader("upload FK file", type={"xlsx","csv", "txt"})
 workbook_xml = BytesIO(fkonzept)
 workbook_xml.seek(0)
-wb = openpyxl.load_workbook(workbook_xml)
+wb = load_workbook(workbook_xml)
 
 
 km_liste = st.file_uploader("upload KM file", type={"xlsx","csv", "txt"})
