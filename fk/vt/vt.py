@@ -43,9 +43,6 @@ from openpyxl import Workbook
 # =============================================================================
 
 
-root = Tk()
-root.withdraw()
-
 
 #get a Series with all variants (names) presentin a VT
 def get_variants(df_vt):
