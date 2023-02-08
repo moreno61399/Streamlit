@@ -159,6 +159,7 @@ st.title("FK_KM CHECK")
 wb = Workbook()
 
 ruta_fk = st.text_input('Ruta_Fk', 'ruta')
+st.write(ruta_fk)
 fkonzept = st.file_uploader("upload FK file", type={"xlsx","csv", "txt"})
 km_liste = st.file_uploader("upload KM file", type={"xlsx","csv", "txt"})
 
