@@ -183,6 +183,8 @@ if fkonzept is not None:
     #df_fk = pd.read_excel(fkonzept)
     #st.write(df_fk)
     wb =load_workbook(fkonzept, read_only=True)
+    dict_vts = get_dict_vts(wb_fk, '', delete_grey)
+    st.write(dict_vts)
     st.write(wb.sheetnames)
     st.title(wb)
     st.write(wb.active)
@@ -200,7 +202,7 @@ Status=2325
 excel=main_check_FK(Status, wb, df_km,"yes")
 
 
-st.write(df_fk)
+#st.write(df_fk)
 
 
 #♂st.title(fk)
