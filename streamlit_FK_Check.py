@@ -183,7 +183,7 @@ if fkonzept is not None:
     #df_fk = pd.read_excel(fkonzept)
     #st.write(df_fk)
     wb =load_workbook(fkonzept, read_only=True)
-    dict_vts = get_dict_vts(wb, '', delete_grey)
+    dict_vts = get_dict_vts(wb, '', "yes")
     st.write(dict_vts)
     st.write(wb.sheetnames)
     st.title(wb)
