@@ -185,7 +185,7 @@ if fkonzept is not None:
     
 if km_liste is not None:
     df_km = pd.read_excel(km_liste,engine='openpyxl')    
-    
+    st.write(df_km)
     
  
 #Status = st.text_input("Enter your name", "")
