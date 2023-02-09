@@ -164,7 +164,7 @@ st.write(ruta_fk)
 
 fkonzept = st.file_uploader("upload FK file", type={"xlsx","csv", "txt"})
 wb =load_workbook(fkonzept, read_only=True)
-
+st.write(wb_fk.sheetnames)
 km_liste = st.file_uploader("upload KM file", type={"xlsx","csv", "txt"})
 
 
