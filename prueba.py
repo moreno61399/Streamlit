@@ -13,12 +13,10 @@ if fkonzept is not None:
     st.title(wb)
     st.write(wb.active)
 
-wb=wb.save('fk.xlsx')   
+wb.save('fk.xlsx')   
  
 st.download_button(
-   "Press to Download your REPORT",
-   wb,
-   "file.csv",
-   "text/csv",
-   key='download-csv'
-)
+        label="Download Excel worksheet without index",
+        data=buffer,
+        file_name="fk.xlsx",
+        mime="application/vnd.ms-excel",)
