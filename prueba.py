@@ -1,3 +1,5 @@
+import streamlit as st
+
 st.title("FK_KM CHECK")
 
 fkonzept = st.file_uploader("upload FK file", type={"xlsx","csv", "txt"})
