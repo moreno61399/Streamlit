@@ -83,13 +83,17 @@ def main_check_FK(Status, wb_fk, df_KM, delete_grey):
     df_KM_aktuell =  pd.DataFrame()
     
     df_KM.columns = list(map(lambda x: x.strip(),df_KM.columns))
+      
+    #y generamos un diccionario VT-df_VT con el df_VT ya limpio de rojo y tachado
+    dict_vts = get_dict_vts(wb_fk, '', delete_grey)
+    st.write(dict_vts)
+   
+   
    
     st.write(df_KM.columns)
     df_KM_aktuell = km.filter_by_Status(df_KM, Status)
    
-    #y generamos un diccionario VT-df_VT con el df_VT ya limpio de rojo y tachado
-    dict_vts = get_dict_vts(wb_fk, '', delete_grey)
-    st.write(dict_vts)
+  
 
     #introducimos una parte para leer desde aquí también las hojas de wires y boms
 
