@@ -167,8 +167,7 @@ ruta_fk = st.text_input('Ruta_Fk', 'ruta')
 st.write(ruta_fk)
 
 fkonzept = st.file_uploader("upload FK file", type={"xlsx","csv", "txt"})
-wb =load_workbook(fkonzept, read_only=True)
-st.write(wb.sheetnames)
+
 km_liste = st.file_uploader("upload KM file", type={"xlsx","csv", "txt"})
 
 
@@ -181,9 +180,10 @@ df_fk=pd.DataFrame()
 df_km=pd.DataFrame()
 
 if fkonzept is not None:
-    df_fk = pd.read_excel(fkonzept)
-    st.write(df_fk)
-    #wb = load_workbook(ruta_fk,data_only=True)
+    #df_fk = pd.read_excel(fkonzept)
+    #st.write(df_fk)
+    wb =load_workbook(fkonzept, read_only=True)
+    st.write(wb.sheetnames)
     st.title(wb)
     st.write(wb.active)
     
