@@ -199,8 +199,8 @@ if km_liste is not None:
 #Status=int(float(Status))
 
 Status=2325
-excel=main_check_FK(Status, wb, df_km,"yes")
-
+#excel=main_check_FK(Status, wb, df_km,"yes")
+#excel=wb
 
 #st.write(df_fk)
 
