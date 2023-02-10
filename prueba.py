@@ -14,7 +14,7 @@ if fkonzept is not None:
     st.title(wb)
     st.write(wb.active)
 
-wb.close()    
+#wb.close()    
 buffer = io.BytesIO()
 wb.save(buffer)
 
