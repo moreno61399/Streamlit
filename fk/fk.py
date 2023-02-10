@@ -496,7 +496,7 @@ def get_Report_FK(dict_vts, df_KM_aktuell, df_wire, df_bom):
     dict_vts_corregido = {}
     for VT in dict_vts:
         
-        value=len(dict_vts))
+        value=len(dict_vts)
         st.progress(value, text="Analyzing FK and KM)
         
         #POR AHORA NO HACEMOS CHECKEO DE LA HOJA STEUERUNGSVORGABE
