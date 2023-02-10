@@ -17,6 +17,7 @@ if fkonzept is not None:
     
 buffer = io.BytesIO()
 wb.save(buffer)
+wb.close()
 
 st.download_button(
     label="Download Excel worksheet without index",
