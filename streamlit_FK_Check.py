@@ -182,7 +182,7 @@ df_km=pd.DataFrame()
 if fkonzept is not None:
     #df_fk = pd.read_excel(fkonzept)
     #st.write(df_fk)
-    wb =load_workbook(fkonzept, read_only=True)
+    wb =load_workbook(fkonzept, read_only=False)
     dict_vts = get_dict_vts(wb, '', "yes")
     st.write(list(dict_vts.keys())[0])
     st.write(wb.sheetnames)
