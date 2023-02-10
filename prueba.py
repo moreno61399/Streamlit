@@ -21,7 +21,7 @@ wb.save(buffer)
 
 st.download_button(
     label="Download Excel worksheet without index",
-    data=buffer,
+    data=buffer.getvalue(),
     file_name="fk.xlsx",
 )
     
