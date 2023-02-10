@@ -14,10 +14,10 @@ if fkonzept is not None:
     st.title(wb)
     st.write(wb.active)
 
-    
+wb.close()    
 buffer = io.BytesIO()
 wb.save(buffer)
-wb.close()
+
 
 st.download_button(
     label="Download Excel worksheet without index",
