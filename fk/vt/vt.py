@@ -402,7 +402,7 @@ def check_variant_name(df_VT):
 def check_headers(df_VT):
     
     #establecemos los encabezados oficiales
-    Official_VT = pd.read_excel('h:/Groups/CPE/0_DptoIng/6_Instrucciones oficiales/Anweisungen_CPE/CPE-W-074_Darstellung FK/CPE-W-074 Rev.9/CPE-W-074 Rev. 9 Anlage 4 Zuordnungsmatrix (Vorlage) - Attachment 4 Assignment matrix (template).xlsx',engine='openpyxl')
+    Official_VT = pd.read_excel('CPE-W-074 Rev. 9 Anlage 4 Zuordnungsmatrix (Vorlage) - Attachment 4 Assignment matrix (template).xlsx',engine='openpyxl')
     
     Official_headers = Official_VT.iloc[7,:].dropna().tolist()
     
