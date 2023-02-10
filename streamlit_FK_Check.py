@@ -214,10 +214,3 @@ if fkonzept is not None:
 #csv = convert_df(df_fk)
 
 """
-st.download_button(
-   "Press to Download your REPORT",
-   excel,
-   "file.csv",
-   "text/csv",
-   key='download-csv'
-)"""
