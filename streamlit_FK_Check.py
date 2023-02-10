@@ -164,8 +164,8 @@ def main_check_FK(Status, wb_fk, df_KM, delete_grey):
 st.title("FK_KM CHECK")
 wb = Workbook()
 
-ruta_fk = st.text_input('Ruta_Fk', 'ruta')
-st.write(ruta_fk)
+#ruta_fk = st.text_input('Ruta_Fk', 'ruta')
+#st.write(ruta_fk)
 
 fkonzept = st.file_uploader("upload FK file", type={"xlsx","csv", "txt"})
 
@@ -200,7 +200,10 @@ if km_liste is not None:
 #Status=int(float(Status))
 
 Status=2325
-main_check_FK(Status, wb, df_km,"yes")
+
+if fkonzept is not None:
+   if km_liste is not None:
+      main_check_FK(Status, wb, df_km,"yes")
 #excel=wb
 
 #st.write(df_fk)
