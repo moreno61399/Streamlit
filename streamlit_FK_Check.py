@@ -86,12 +86,12 @@ def main_check_FK(Status, wb_fk, df_KM, delete_grey):
       
     #y generamos un diccionario VT-df_VT con el df_VT ya limpio de rojo y tachado
     dict_vts = get_dict_vts(wb_fk, '', delete_grey)
-    st.write(dict_vts)
+    #st.write(dict_vts)
    
    
    
-    st.write(df_KM.columns)
-    st.write(df_km)
+    #st.write(df_KM.columns)
+    #st.write(df_km)
     df_KM_aktuell = km.filter_by_Status(df_KM, Status)
    
   
@@ -186,9 +186,9 @@ if fkonzept is not None:
     wb =load_workbook(fkonzept, read_only=False)
     #dict_vts = get_dict_vts(wb, '', "yes")
     #st.write(dict_vts)
-    st.write(wb.sheetnames)
-    st.title(wb)
-    st.write(wb.active)
+    #st.write(wb.sheetnames)
+    #st.title(wb)
+    #st.write(wb.active)
     
 if km_liste is not None:
     df_km = pd.read_excel(km_liste,engine='openpyxl')    
