@@ -184,7 +184,7 @@ if fkonzept is not None:
     #st.write(df_fk)
     wb =load_workbook(fkonzept, read_only=False)
     dict_vts = get_dict_vts(wb, '', "yes")
-    st.write(list(dict_vts.keys())[0])
+    st.write(dict_vts)
     st.write(wb.sheetnames)
     st.title(wb)
     st.write(wb.active)
