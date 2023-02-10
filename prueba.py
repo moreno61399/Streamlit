@@ -9,7 +9,7 @@ fkonzept = st.file_uploader("upload FK file", type={"xlsx","csv", "txt"})
 wb=Workbook()
 
 if fkonzept is not None:
-    wb =load_workbook(fkonzept, read_only=True)
+    wb =load_workbook(fkonzept, read_only=False)
     st.write(wb.sheetnames)
     st.title(wb)
     st.write(wb.active)
