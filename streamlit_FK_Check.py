@@ -190,7 +190,7 @@ if fkonzept is not None:
     st.write(wb.active)
     
 if km_liste is not None:
-    df_km = pd.read_excel(km_liste)    
+    df_km = pd.read_excel(km_liste,engine='openpyxl')    
      #,engine='openpyxl'
     st.write(df_km)
     
