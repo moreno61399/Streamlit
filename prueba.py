@@ -1,5 +1,6 @@
 import streamlit as st
 from openpyxl import reader,load_workbook,Workbook
+import io
 
 st.title("FK_KM CHECK")
 
@@ -13,10 +14,14 @@ if fkonzept is not None:
     st.title(wb)
     st.write(wb.active)
 
-wb.save('fk.xlsx')   
- 
+    
+buffer = io.BytesIO()
+wb.save(buffer)
+
 st.download_button(
-        label="Download Excel worksheet without index",
-        data=buffer,
-        file_name="fk.xlsx",
-        mime="application/vnd.ms-excel",)
+    label="Download Excel worksheet without index",
+    data=buffer,
+    file_name="fk.xlsx",
+)
+    
+ 
