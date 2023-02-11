@@ -164,7 +164,7 @@ def main_check_FK(Status, wb_fk, df_KM, delete_grey):
 st.title("FK_KM CHECK")
 wb = Workbook()
 
-Status= st.number_input('STATUS')
+Status= st.number_input('STATUS',value =2348)
 
 #st.write(ruta_fk)
 
