@@ -212,7 +212,7 @@ if km_liste is not None:
 if fkonzept is not None:
    if km_liste is not None:
       main_check_FK(Status, wb, df_km,delete_grey)
-      delete_grey
+      
 #excel=wb
 
 #st.write(df_fk)
