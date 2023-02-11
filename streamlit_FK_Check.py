@@ -151,9 +151,9 @@ def main_check_FK(Status, wb_fk, df_KM, delete_grey):
                     df_Report.to_excel(writer,sheet_name=Report_name,index=False)
         writer.save()
         st.download_button(
-        label="Download Excel worksheet without index",
+        label="Download FK REPORT",
         data=buffer,
-        file_name="df1.xlsx",
+        file_name="FK_Report.xlsx",
         mime="application/vnd.ms-excel",)
         if contador_errores ==1:
             st.write("Check_FK", 'Oh no!\n\n' + str(contador_errores) + ' error has been detected.\n\nPlease check file "Report_Check_FK"')
