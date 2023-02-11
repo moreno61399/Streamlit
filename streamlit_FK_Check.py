@@ -164,8 +164,8 @@ def main_check_FK(Status, wb_fk, df_KM, delete_grey):
 st.title("FK_KM CHECK")
 wb = Workbook()
 
-Status= st.text_input('STATUS')
-Status=int(Status)
+Status= st.number_input('STATUS')
+
 #st.write(ruta_fk)
 
 fkonzept = st.file_uploader("upload FK file", type={"xlsx","csv", "txt"})
