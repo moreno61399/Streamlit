@@ -165,6 +165,13 @@ st.title("FK_KM CHECK")
 wb = Workbook()
 
 Status= st.number_input('STATUS',value =2348)
+agree = st.checkbox('DeletGrey',value=True)
+
+if agree:
+   st.write('Grey will be deleted')
+   delete_grey="yes"
+else:
+   delete_grey="no"
 
 #st.write(ruta_fk)
 
@@ -204,7 +211,8 @@ if km_liste is not None:
 
 if fkonzept is not None:
    if km_liste is not None:
-      main_check_FK(Status, wb, df_km,"yes")
+      main_check_FK(Status, wb, df_km,delete_grey)
+      delete_grey
 #excel=wb
 
 #st.write(df_fk)
