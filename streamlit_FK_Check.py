@@ -209,10 +209,20 @@ if km_liste is not None:
 
 #Status=2325
 
-if fkonzept is not None:
-   if km_liste is not None:
-      main_check_FK(Status, wb, df_km,delete_grey)
+#if fkonzept is not None:
+   #if km_liste is not None:
+   
+result=st.button("run analysis")
+
+if result:
+   if fkonzept is not None:
+      if km_liste is not None:
       
+         main_check_FK(Status, wb, df_km,delete_grey)
+      else:
+         st.write("Please Load a KM")
+   else:
+      st.write("Please Load a FK")
 #excel=wb
 
 #st.write(df_fk)
