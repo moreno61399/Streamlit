@@ -175,9 +175,9 @@ else:
 
 #st.write(ruta_fk)
 
-fkonzept = st.file_uploader("upload FK file", type={"xlsx","csv", "txt"})
+fkonzept = st.file_uploader("upload FK file", type={"xlsx","csv", "txt","xlsm","xls"})
 
-km_liste = st.file_uploader("upload KM file", type={"xlsx","csv", "txt"})
+km_liste = st.file_uploader("upload KM file", type={"xlsx","csv", "txt","xlsm","xls"})
 
 
 #st.title(fkonzept.name)
